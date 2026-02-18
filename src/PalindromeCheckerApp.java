@@ -6,10 +6,17 @@ public class PalindromeCheckerApp {
 
         PalindromeStrategy strategy = new StackStrategy();
 
+        long startTime = System.nanoTime();
+
         boolean isPalindrome = strategy.check(input);
+
+        long endTime = System.nanoTime();
+
+        long executionTime = endTime - startTime;
 
         System.out.println("Input : " + input);
         System.out.println("Is Palindrome? : " + isPalindrome);
+        System.out.println("Execution Time : " + executionTime + " ns");
     }
 }
 
